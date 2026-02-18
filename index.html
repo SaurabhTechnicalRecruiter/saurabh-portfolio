@@ -11,7 +11,6 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
 <style>
-
 html{scroll-behavior:smooth}
 body{
 margin:0;
@@ -28,95 +27,51 @@ color:#1f2937;
 
 /* NAV */
 .navbar{
-position:fixed;
-top:0;
-width:100%;
-padding:15px 40px;
-background:white;
+position:fixed;top:0;width:100%;
+padding:15px 40px;background:#fff;
 box-shadow:0 4px 20px rgba(0,0,0,.08);
-z-index:999;
-display:flex;
-justify-content:space-between;
-align-items:center;
+z-index:999;display:flex;justify-content:space-between;align-items:center;
 }
-
 .navbar strong{font-size:20px}
-
-.navbar a{
-margin-left:20px;
-text-decoration:none;
-color:#333;
-font-weight:500;
-}
-
-.navbar a:hover{color:#000}
+.navbar a{margin-left:20px;text-decoration:none;color:#333;font-weight:500}
 
 /* HERO */
 .hero{
-min-height:100vh;
-background:url('img/bg.jpg') center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding-top:80px;
-color:white;
+min-height:100vh;background:url('img/bg.jpg') center/cover;
+display:flex;align-items:center;justify-content:center;text-align:center;
+padding-top:80px;color:white;
 }
-
 .hero img{
-width:170px;height:170px;
-border-radius:50%;
-border:4px solid white;
-object-fit:cover;
+width:170px;height:170px;border-radius:50%;
+border:4px solid #fff;object-fit:cover;
 box-shadow:0 10px 30px rgba(0,0,0,.4)
 }
 
-/* SECTIONS */
+/* LAYOUT */
 .container{width:85%;margin:auto}
 
+/* SECTIONS */
 .section-box{
-background:white;
-padding:50px;
-border-radius:16px;
+background:#fff;padding:50px;border-radius:16px;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
-margin:60px 0;
-opacity:0;
-transform:translateY(40px);
-transition:.8s
+margin:60px 0;opacity:0;transform:translateY(40px);transition:.8s
 }
-
 .section-box.show{opacity:1;transform:none}
-
 h2{border-left:6px solid var(--ey-yellow);padding-left:12px}
 
 /* METRICS */
 .metrics{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-text-align:center
+display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;text-align:center
 }
-
-.metric{
-padding:30px;
-border-radius:12px;
-background:#fafafa;
-box-shadow:0 5px 15px rgba(0,0,0,.07)
-}
+.metric{padding:30px;border-radius:12px;background:#fafafa;box-shadow:0 5px 15px rgba(0,0,0,.07)}
 
 /* LOGOS */
-.logos img{
-height:45px;
-margin:15px;
-filter:grayscale(100%);
-opacity:0;
-transition:.6s
-}
-
+.logos img{height:45px;margin:15px;filter:grayscale(100%);opacity:0;transition:.6s}
 .logos img.show{opacity:1}
 
 /* SKILLS */
-.skill{margin-bottom:15px}
+.skill{margin-bottom:18px}
 .bar{background:#ddd;height:8px;border-radius:10px;overflow:hidden}
 .bar span{display:block;height:100%;background:var(--ey-yellow);width:0}
 
@@ -126,33 +81,18 @@ transition:.6s
 
 /* BUTTON */
 .btn{
-background:var(--ey-yellow);
-padding:12px 25px;
-border-radius:25px;
-text-decoration:none;
-color:black;
-font-weight:600;
+background:var(--ey-yellow);padding:12px 25px;border-radius:25px;
+text-decoration:none;color:#000;font-weight:600;
 }
 
 /* FLOAT */
 .float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
+position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;
+padding:15px;border-radius:50%;
 }
 
 /* FOOTER */
-footer{
-background:#1f2937;
-color:white;
-text-align:center;
-padding:20px
-}
-
+footer{background:#1f2937;color:#fff;text-align:center;padding:20px}
 </style>
 </head>
 
@@ -173,8 +113,7 @@ padding:20px
 <div>
 <img src="img/profile.jpg">
 <h1>Senior IT & ERP Recruiter</h1>
-<p>SAP • Oracle • Cloud • Data • US Staffing</p>
-<br>
+<p>SAP • Oracle • Cloud • Data • US Staffing</p><br>
 <a href="./resume.pdf" class="btn" download>Download Resume</a>
 </div>
 </div>
@@ -184,42 +123,29 @@ padding:20px
 <!-- SUMMARY -->
 <div class="section-box" id="about">
 <h2>Executive Summary</h2>
-
-<p>
-Senior IT & ERP Recruiter with 10+ years overall professional experience, including 7+ years in specialized IT & ERP recruitment across India and US staffing models.
-</p>
-
-<p>
-Proven track record in owning recruitment strategy, delivering niche hiring across SAP, Oracle, Cloud, Data, and Engineering roles, consistently meeting aggressive SLAs.
-</p>
-
-<p>
-Strong stakeholder partner with measurable hiring outcomes and predictable delivery frameworks.
-</p>
+<p>Senior IT & ERP Recruiter with 10+ years overall experience, including 7+ years in specialized IT & ERP recruitment across India and US staffing models.</p>
+<p>Proven delivery across SAP, Oracle, Cloud, Data and Engineering roles while meeting aggressive SLAs.</p>
+<p>Strong stakeholder partner with predictable hiring outcomes.</p>
 </div>
 
 <!-- CORE EXPERTISE -->
 <div class="section-box">
-<h2>Core Expertise</h2>
-
+<h2>Recruitment Core Expertise</h2>
 <ul>
-<li>Senior IT & ERP Recruitment</li>
-<li>US IT Staffing</li>
-<li>SAP & Oracle Hiring</li>
-<li>Cloud & Data Hiring</li>
-<li>Recruitment Strategy & Delivery Ownership</li>
-<li>Hiring Metrics & SLA Governance</li>
+<li>End-to-End IT Recruitment</li>
+<li>US Staffing (C2C / W2 / Full-Time / C2H)</li>
+<li>Stakeholder & Hiring Manager Partnership</li>
 <li>LinkedIn Boolean & Talent Mapping</li>
 <li>Offer Negotiation & Joining Management</li>
 <li>Pipeline Building & Market Intelligence</li>
-<li>Contract / Permanent / RPO Models</li>
+<li>SLA Governance & Hiring Metrics</li>
+<li>Recruitment Strategy Ownership</li>
 </ul>
 </div>
 
 <!-- ORGANIZATIONS -->
 <div class="section-box logos">
 <h2>Organizations</h2>
-
 <img src="img/logos/ey.png">
 <img src="img/logos/taj.png">
 <img src="img/logos/quantum.png">
@@ -227,15 +153,13 @@ Strong stakeholder partner with measurable hiring outcomes and predictable deliv
 <img src="img/logos/nlb.png">
 <img src="img/logos/diverselynx.png">
 <img src="img/logos/tekinspiration.png">
-
 </div>
 
 <!-- METRICS -->
 <div class="section-box">
 <h2>Hiring Impact</h2>
-
 <div class="metrics">
-<div class="metric"><h1 class="counter" data-target="12">0</h1>Closures / Month</div>
+<div class="metric"><h1 class="counter" data-target="12">0</h1>Offers / Quarter</div>
 <div class="metric"><h1 class="counter" data-target="95">0</h1>SLA %</div>
 <div class="metric"><h1 class="counter" data-target="25">0</h1>Active Reqs</div>
 <div class="metric"><h1 class="counter" data-target="20">0</h1>TAT Days</div>
@@ -245,47 +169,28 @@ Strong stakeholder partner with measurable hiring outcomes and predictable deliv
 <!-- EXPERIENCE -->
 <div class="section-box timeline" id="experience">
 <h2>Professional Experience</h2>
+<div><b>Lead Technical Recruiter – Taj Consultancy (EY Partner)</b><br>
+SAP, Oracle, Cloud & Data hiring. 15–25 requisitions concurrently. 12 offers per quarter. 90–95% SLA. 18–25 days TAT.</div>
 
-<div>
-<b>Lead Technical Recruiter – Taj Consultancy (EY Partner)</b><br>
-Own recruitment strategy for SAP, Oracle, Cloud & Data roles.  
-Manage 15–25 requisitions with 90–95% SLA.  
-8–12 closures monthly.  
-18–25 days average TAT.
-</div>
+<div><b>Senior IT Recruiter – US Staffing</b><br>
+C2C / W2 / FT / C2H hiring across SAP, Oracle ERP, Cloud, DevOps & Engineering.</div>
 
-<div>
-<b>Senior IT Recruiter – US Staffing (2019–2024)</b><br>
-SAP, Oracle ERP, Cloud, DevOps, QA Automation.  
-6–10 monthly closures across C2C/W2/FT/C2H.
-</div>
+<div><b>Self-Employed – Café Business</b><br>
+Operations, vendor management & customer engagement.</div>
 
-<div>
-<b>Self Employed – Café Business</b><br>
-Operations, vendor management & customer engagement.
-</div>
-
-<div>
-<b>Early Career – Customer Service & Operations</b><br>
-Stakeholder handling & service excellence.
-</div>
-
+<div><b>Early Career – Customer Service & Operations</b><br>
+Stakeholder handling & service excellence.</div>
 </div>
 
 <!-- SKILLS -->
 <div class="section-box" id="skills">
-<h2>Skills</h2>
-
-<div class="skill">SAP<div class="bar"><span data-width="90%"></span></div></div>
-<div class="skill">Oracle<div class="bar"><span data-width="85%"></span></div></div>
-<div class="skill">Cloud<div class="bar"><span data-width="80%"></span></div></div>
-
-</div>
-
-<!-- EDUCATION -->
-<div class="section-box">
-<h2>Education</h2>
-Higher Secondary (12th Standard)
+<h2>Recruitment Skills & Hiring Stack</h2>
+<div class="skill">End-to-End IT Recruitment<div class="bar"><span data-width="95%"></span></div></div>
+<div class="skill">US Staffing Models<div class="bar"><span data-width="90%"></span></div></div>
+<div class="skill">SAP / Oracle Hiring<div class="bar"><span data-width="90%"></span></div></div>
+<div class="skill">Cloud & Data Hiring<div class="bar"><span data-width="85%"></span></div></div>
+<div class="skill">LinkedIn Boolean Search<div class="bar"><span data-width="95%"></span></div></div>
+<div class="skill">Stakeholder Management<div class="bar"><span data-width="90%"></span></div></div>
 </div>
 
 <!-- CERTIFICATIONS -->
@@ -303,19 +208,14 @@ AI-Driven Recruiting • ChatGPT for HR • Recruiter Power User • Naukri Maes
 <p>+91 6395990728</p>
 </div>
 
-<footer>
-© 2026 Saurabh Sharma | Senior IT & ERP Recruiter
-</footer>
+<footer>© 2026 Saurabh Sharma | Senior IT & ERP Recruiter</footer>
 
 <a href="https://wa.me/916395990728" class="float"><i class="fab fa-whatsapp"></i></a>
 
 <script>
-
-/* Reveal */
+/* Reveal sections */
 document.querySelectorAll('.section-box').forEach(s=>{
-new IntersectionObserver(e=>{
-if(e[0].isIntersecting)s.classList.add("show");
-}).observe(s);
+new IntersectionObserver(e=>{ if(e[0].isIntersecting)s.classList.add("show"); }).observe(s);
 });
 
 /* Counters */
@@ -330,16 +230,11 @@ let t=+c.dataset.target,v=0;
 
 /* Skills */
 document.querySelectorAll('.bar span').forEach(b=>{
-new IntersectionObserver(e=>{
-if(e[0].isIntersecting)b.style.width=b.dataset.width;
-}).observe(b);
+new IntersectionObserver(e=>{ if(e[0].isIntersecting)b.style.width=b.dataset.width; }).observe(b);
 });
 
 /* Logos */
-document.querySelectorAll('.logos img').forEach((l,i)=>{
-setTimeout(()=>l.classList.add("show"),i*150)
-});
-
+document.querySelectorAll('.logos img').forEach((l,i)=>{ setTimeout(()=>l.classList.add("show"),i*150) });
 </script>
 
 </body>
