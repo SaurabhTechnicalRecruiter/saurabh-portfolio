@@ -7,21 +7,79 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="icon" href="img/favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
 
 <style>
 
 html{scroll-behavior:smooth}
-body{background:#f8f9fa;font-family:Roboto}
+body{
+margin:0;
+font-family:Roboto,sans-serif;
+background:#f5f6f8;
+color:#1f2937;
+}
+
+/* EY COLORS */
+:root{
+--ey-yellow:#FFE600;
+--ey-dark:#1f2937;
+}
+
+/* NAV */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+padding:15px 40px;
+background:white;
+box-shadow:0 4px 20px rgba(0,0,0,.08);
+z-index:999;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.navbar strong{font-size:20px}
+
+.navbar a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.navbar a:hover{color:#000}
+
+/* HERO */
+.hero{
+min-height:100vh;
+background:url('img/bg.jpg') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding-top:80px;
+color:white;
+}
+
+.hero img{
+width:170px;height:170px;
+border-radius:50%;
+border:4px solid white;
+object-fit:cover;
+box-shadow:0 10px 30px rgba(0,0,0,.4)
+}
+
+/* SECTIONS */
+.container{width:85%;margin:auto}
 
 .section-box{
 background:white;
-padding:45px;
+padding:50px;
 border-radius:16px;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
-margin-bottom:60px;
+margin:60px 0;
 opacity:0;
 transform:translateY(40px);
 transition:.8s
@@ -29,43 +87,70 @@ transition:.8s
 
 .section-box.show{opacity:1;transform:none}
 
-.metric-box{
-padding:30px;
-border-radius:14px;
-background:white;
-box-shadow:0 6px 20px rgba(0,0,0,.08);
-transition:.3s
+h2{border-left:6px solid var(--ey-yellow);padding-left:12px}
+
+/* METRICS */
+.metrics{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+text-align:center
 }
 
-.metric-box:hover{transform:translateY(-6px)}
+.metric{
+padding:30px;
+border-radius:12px;
+background:#fafafa;
+box-shadow:0 5px 15px rgba(0,0,0,.07)
+}
 
-.logo-row img{
-height:50px;
+/* LOGOS */
+.logos img{
+height:45px;
 margin:15px;
 filter:grayscale(100%);
 opacity:0;
 transition:.6s
 }
 
-.logo-row img.show{opacity:1}
+.logos img.show{opacity:1}
 
-.skill-bar{background:#ddd;height:8px;border-radius:10px;overflow:hidden}
-.skill-bar span{display:block;height:100%;background:#0d6efd;width:0}
+/* SKILLS */
+.skill{margin-bottom:15px}
+.bar{background:#ddd;height:8px;border-radius:10px;overflow:hidden}
+.bar span{display:block;height:100%;background:var(--ey-yellow);width:0}
 
-.timeline{border-left:3px solid #0d6efd;padding-left:25px}
+/* TIMELINE */
+.timeline{border-left:3px solid var(--ey-yellow);padding-left:25px}
 .timeline div{margin-bottom:25px}
 
-.hero-title{animation:slideDown 1s ease forwards;opacity:0}
-.hero-sub{animation:fadeIn 1.5s ease forwards;opacity:0}
-
-@keyframes slideDown{
-from{opacity:0;transform:translateY(-30px)}
-to{opacity:1}
+/* BUTTON */
+.btn{
+background:var(--ey-yellow);
+padding:12px 25px;
+border-radius:25px;
+text-decoration:none;
+color:black;
+font-weight:600;
 }
 
-@keyframes fadeIn{
-from{opacity:0}
-to{opacity:1}
+/* FLOAT */
+.float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+}
+
+/* FOOTER */
+footer{
+background:#1f2937;
+color:white;
+text-align:center;
+padding:20px
 }
 
 </style>
@@ -73,37 +158,68 @@ to{opacity:1}
 
 <body>
 
-<nav class="navbar fixed-top bg-light shadow-sm p-3">
+<div class="navbar">
 <strong>Saurabh Sharma</strong>
-</nav>
+<div>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
 
 <!-- HERO -->
-<div class="container-fluid text-center py-5"
-style="min-height:100vh;background:url('img/bg.jpg') center/cover">
-
-<br><br>
-
-<img src="img/profile.jpg"
-style="width:160px;height:160px;border-radius:50%;border:4px solid white;object-fit:cover">
-
-<h1 class="text-white hero-title">Senior IT & ERP Recruiter</h1>
-<h4 class="text-white hero-sub" id="typing"></h4>
-
+<div class="hero">
+<div>
+<img src="img/profile.jpg">
+<h1>Senior IT & ERP Recruiter</h1>
+<p>SAP • Oracle • Cloud • Data • US Staffing</p>
 <br>
-<a href="./resume.pdf" class="btn btn-primary" download>Download Resume</a>
-
+<a href="./resume.pdf" class="btn" download>Download Resume</a>
+</div>
 </div>
 
-<div class="container mt-5">
+<div class="container">
 
 <!-- SUMMARY -->
-<div class="section-box text-center">
+<div class="section-box" id="about">
 <h2>Executive Summary</h2>
-<p>10+ years experience across SAP, Oracle, Cloud, Data & US Staffing.</p>
+
+<p>
+Senior IT & ERP Recruiter with 10+ years overall professional experience, including 7+ years in specialized IT & ERP recruitment across India and US staffing models.
+</p>
+
+<p>
+Proven track record in owning recruitment strategy, delivering niche hiring across SAP, Oracle, Cloud, Data, and Engineering roles, consistently meeting aggressive SLAs.
+</p>
+
+<p>
+Strong stakeholder partner with measurable hiring outcomes and predictable delivery frameworks.
+</p>
 </div>
 
-<!-- LOGOS -->
-<div class="section-box text-center logo-row">
+<!-- CORE EXPERTISE -->
+<div class="section-box">
+<h2>Core Expertise</h2>
+
+<ul>
+<li>Senior IT & ERP Recruitment</li>
+<li>US IT Staffing</li>
+<li>SAP & Oracle Hiring</li>
+<li>Cloud & Data Hiring</li>
+<li>Recruitment Strategy & Delivery Ownership</li>
+<li>Hiring Metrics & SLA Governance</li>
+<li>LinkedIn Boolean & Talent Mapping</li>
+<li>Offer Negotiation & Joining Management</li>
+<li>Pipeline Building & Market Intelligence</li>
+<li>Contract / Permanent / RPO Models</li>
+</ul>
+</div>
+
+<!-- ORGANIZATIONS -->
+<div class="section-box logos">
+<h2>Organizations</h2>
+
 <img src="img/logos/ey.png">
 <img src="img/logos/taj.png">
 <img src="img/logos/quantum.png">
@@ -111,58 +227,98 @@ style="width:160px;height:160px;border-radius:50%;border:4px solid white;object-
 <img src="img/logos/nlb.png">
 <img src="img/logos/diverselynx.png">
 <img src="img/logos/tekinspiration.png">
+
 </div>
 
 <!-- METRICS -->
 <div class="section-box">
-<div class="row text-center">
+<h2>Hiring Impact</h2>
 
-<div class="col-md-3"><div class="metric-box"><h2 class="counter" data-target="12">0</h2>Closures / Month</div></div>
-<div class="col-md-3"><div class="metric-box"><h2 class="counter" data-target="95">0</h2>SLA %</div></div>
-<div class="col-md-3"><div class="metric-box"><h2 class="counter" data-target="25">0</h2>Reqs</div></div>
-<div class="col-md-3"><div class="metric-box"><h2 class="counter" data-target="20">0</h2>TAT Days</div></div>
-
+<div class="metrics">
+<div class="metric"><h1 class="counter" data-target="12">0</h1>Closures / Month</div>
+<div class="metric"><h1 class="counter" data-target="95">0</h1>SLA %</div>
+<div class="metric"><h1 class="counter" data-target="25">0</h1>Active Reqs</div>
+<div class="metric"><h1 class="counter" data-target="20">0</h1>TAT Days</div>
 </div>
 </div>
 
 <!-- EXPERIENCE -->
-<div class="section-box timeline">
-<div><b>Lead Recruiter – EY Partner</b><br>8–12 closures monthly</div>
-<div><b>Senior US IT Recruiter</b><br>C2C / W2 / FT</div>
-<div><b>Entrepreneur</b></div>
+<div class="section-box timeline" id="experience">
+<h2>Professional Experience</h2>
+
+<div>
+<b>Lead Technical Recruiter – Taj Consultancy (EY Partner)</b><br>
+Own recruitment strategy for SAP, Oracle, Cloud & Data roles.  
+Manage 15–25 requisitions with 90–95% SLA.  
+8–12 closures monthly.  
+18–25 days average TAT.
+</div>
+
+<div>
+<b>Senior IT Recruiter – US Staffing (2019–2024)</b><br>
+SAP, Oracle ERP, Cloud, DevOps, QA Automation.  
+6–10 monthly closures across C2C/W2/FT/C2H.
+</div>
+
+<div>
+<b>Self Employed – Café Business</b><br>
+Operations, vendor management & customer engagement.
+</div>
+
+<div>
+<b>Early Career – Customer Service & Operations</b><br>
+Stakeholder handling & service excellence.
+</div>
+
 </div>
 
 <!-- SKILLS -->
+<div class="section-box" id="skills">
+<h2>Skills</h2>
+
+<div class="skill">SAP<div class="bar"><span data-width="90%"></span></div></div>
+<div class="skill">Oracle<div class="bar"><span data-width="85%"></span></div></div>
+<div class="skill">Cloud<div class="bar"><span data-width="80%"></span></div></div>
+
+</div>
+
+<!-- EDUCATION -->
 <div class="section-box">
-SAP<div class="skill-bar"><span data-width="90%"></span></div><br>
-Oracle<div class="skill-bar"><span data-width="85%"></span></div><br>
-Cloud<div class="skill-bar"><span data-width="80%"></span></div>
+<h2>Education</h2>
+Higher Secondary (12th Standard)
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="section-box">
+<h2>Certifications</h2>
+AI-Driven Recruiting • ChatGPT for HR • Recruiter Power User • Naukri Maestro • LinkedIn Marketing • Jira Project Management
 </div>
 
 </div>
 
-<a href="https://wa.me/916395990728"
-style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%">
-<i class="fab fa-whatsapp"></i></a>
+<!-- CONTACT -->
+<div class="section-box container" id="contact">
+<h2>Contact</h2>
+<p>saurabhitrecruitment@gmail.com</p>
+<p>+91 6395990728</p>
+</div>
+
+<footer>
+© 2026 Saurabh Sharma | Senior IT & ERP Recruiter
+</footer>
+
+<a href="https://wa.me/916395990728" class="float"><i class="fab fa-whatsapp"></i></a>
 
 <script>
 
-/* typing */
-const t=["SAP Hiring","Oracle Talent","Cloud Recruiting","US Staffing"];
-let i=0,j=0;
-setInterval(()=>{
-document.getElementById("typing").innerText=t[i].slice(0,j++);
-if(j>t[i].length+5){j=0;i=(i+1)%t.length}
-},150);
-
-/* reveal */
+/* Reveal */
 document.querySelectorAll('.section-box').forEach(s=>{
 new IntersectionObserver(e=>{
 if(e[0].isIntersecting)s.classList.add("show");
 }).observe(s);
 });
 
-/* counters */
+/* Counters */
 document.querySelectorAll('.counter').forEach(c=>{
 new IntersectionObserver(e=>{
 if(e[0].isIntersecting){
@@ -172,15 +328,15 @@ let t=+c.dataset.target,v=0;
 }).observe(c);
 });
 
-/* skills */
-document.querySelectorAll('.skill-bar span').forEach(b=>{
+/* Skills */
+document.querySelectorAll('.bar span').forEach(b=>{
 new IntersectionObserver(e=>{
 if(e[0].isIntersecting)b.style.width=b.dataset.width;
 }).observe(b);
 });
 
-/* logos */
-document.querySelectorAll('.logo-row img').forEach((l,i)=>{
+/* Logos */
+document.querySelectorAll('.logos img').forEach((l,i)=>{
 setTimeout(()=>l.classList.add("show"),i*150)
 });
 
