@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
 <title>Saurabh Sharma | Senior IT & ERP Recruiter</title>
@@ -7,130 +8,102 @@
 
 <link rel="icon" href="img/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 
 <style>
 
-/* GLOBAL */
 html{scroll-behavior:smooth}
-body{
-margin:0;
-font-family:Roboto,sans-serif;
-background:#f6f7fb;
-transition:.4s;
-}
-.dark body{background:#0f172a;color:#e5e7eb}
+body{background:#f8f9fa;font-family:Roboto}
 
-/* NAV */
-nav{
-position:fixed;top:0;width:100%;
-display:flex;justify-content:space-between;align-items:center;
-padding:15px 40px;
-background:rgba(255,255,255,.85);
-backdrop-filter:blur(10px);
-z-index:999;
-}
-nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:500}
-nav a.active{color:#2563eb}
-
-/* HERO */
-#home{
-min-height:100vh;
-display:flex;align-items:center;justify-content:center;
-background:url('img/bg.jpg') center/cover;
-text-align:center;color:white;
-padding-top:80px;
-}
-.hero img{
-width:170px;height:170px;border-radius:50%;
-border:4px solid white;
-object-fit:cover;
-box-shadow:0 10px 30px rgba(0,0,0,.4)
+.section-box{
+background:white;
+padding:45px;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+margin-bottom:60px;
+opacity:0;
+transform:translateY(40px);
+transition:.8s
 }
 
-/* SECTIONS */
-section{padding:80px 10%}
-.card{
-background:white;padding:40px;border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,.07);
-margin-bottom:50px;
-opacity:0;transform:translateY(40px);
-transition:.7s
-}
-.card.show{opacity:1;transform:none}
-.dark .card{background:#020617}
+.section-box.show{opacity:1;transform:none}
 
-/* METRICS */
-.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
-.metric{text-align:center;padding:30px;border-radius:12px;background:white}
-.dark .metric{background:#020617}
-
-/* SKILLS */
-.bar{background:#ddd;height:10px;border-radius:10px;overflow:hidden}
-.bar span{display:block;height:100%;background:#2563eb;width:0}
-
-/* TIMELINE */
-.timeline{border-left:3px solid #2563eb;padding-left:30px}
-.timeline div{margin-bottom:30px}
-
-/* LOGOS */
-.logos img{height:45px;margin:15px;filter:grayscale(100%);opacity:0;transition:.6s}
-.logos img.show{opacity:1}
-
-/* TESTIMONIAL */
-.slider{display:flex;overflow:hidden}
-.slide{min-width:100%;transition:.5s}
-
-/* CASES */
-.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-
-/* FLOAT */
-.float{
-position:fixed;bottom:25px;right:25px;
-background:#25D366;color:white;
-padding:15px;border-radius:50%
+.metric-box{
+padding:30px;
+border-radius:14px;
+background:white;
+box-shadow:0 6px 20px rgba(0,0,0,.08);
+transition:.3s
 }
 
-/* TOGGLE */
-.toggle{cursor:pointer}
+.metric-box:hover{transform:translateY(-6px)}
+
+.logo-row img{
+height:50px;
+margin:15px;
+filter:grayscale(100%);
+opacity:0;
+transition:.6s
+}
+
+.logo-row img.show{opacity:1}
+
+.skill-bar{background:#ddd;height:8px;border-radius:10px;overflow:hidden}
+.skill-bar span{display:block;height:100%;background:#0d6efd;width:0}
+
+.timeline{border-left:3px solid #0d6efd;padding-left:25px}
+.timeline div{margin-bottom:25px}
+
+.hero-title{animation:slideDown 1s ease forwards;opacity:0}
+.hero-sub{animation:fadeIn 1.5s ease forwards;opacity:0}
+
+@keyframes slideDown{
+from{opacity:0;transform:translateY(-30px)}
+to{opacity:1}
+}
+
+@keyframes fadeIn{
+from{opacity:0}
+to{opacity:1}
+}
 
 </style>
 </head>
 
 <body>
 
-<nav>
-<div><strong>Saurabh Sharma</strong></div>
-<div>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#skills">Skills</a>
-<a href="#cases">Cases</a>
-<a href="#contact">Contact</a>
-<span class="toggle">🌙</span>
-</div>
+<nav class="navbar fixed-top bg-light shadow-sm p-3">
+<strong>Saurabh Sharma</strong>
 </nav>
 
 <!-- HERO -->
-<section id="home">
-<div class="hero">
-<img src="img/profile.jpg">
-<h1>Senior IT & ERP Recruiter</h1>
-<h3 id="typing"></h3>
+<div class="container-fluid text-center py-5"
+style="min-height:100vh;background:url('img/bg.jpg') center/cover">
+
+<br><br>
+
+<img src="img/profile.jpg"
+style="width:160px;height:160px;border-radius:50%;border:4px solid white;object-fit:cover">
+
+<h1 class="text-white hero-title">Senior IT & ERP Recruiter</h1>
+<h4 class="text-white hero-sub" id="typing"></h4>
+
 <br>
-<a href="./resume.pdf" download>Download Resume</a>
-</div>
-</section>
+<a href="./resume.pdf" class="btn btn-primary" download>Download Resume</a>
 
-<!-- ABOUT -->
-<section id="about">
-<div class="card">
+</div>
+
+<div class="container mt-5">
+
+<!-- SUMMARY -->
+<div class="section-box text-center">
 <h2>Executive Summary</h2>
-<p>10+ years experience across SAP, Oracle, Cloud, Data and US Staffing.</p>
+<p>10+ years experience across SAP, Oracle, Cloud, Data & US Staffing.</p>
 </div>
 
-<div class="card logos">
+<!-- LOGOS -->
+<div class="section-box text-center logo-row">
 <img src="img/logos/ey.png">
 <img src="img/logos/taj.png">
 <img src="img/logos/quantum.png">
@@ -140,113 +113,75 @@ padding:15px;border-radius:50%
 <img src="img/logos/tekinspiration.png">
 </div>
 
-<div class="card metrics">
-<div class="metric"><h1 class="counter" data-target="12">0</h1>Closures</div>
-<div class="metric"><h1 class="counter" data-target="95">0</h1>SLA%</div>
-<div class="metric"><h1 class="counter" data-target="25">0</h1>Reqs</div>
-<div class="metric"><h1 class="counter" data-target="20">0</h1>TAT</div>
+<!-- METRICS -->
+<div class="section-box">
+<div class="row text-center">
+
+<div class="col-md-3"><div class="metric-box"><h2 class="counter" data-target="12">0</h2>Closures / Month</div></div>
+<div class="col-md-3"><div class="metric-box"><h2 class="counter" data-target="95">0</h2>SLA %</div></div>
+<div class="col-md-3"><div class="metric-box"><h2 class="counter" data-target="25">0</h2>Reqs</div></div>
+<div class="col-md-3"><div class="metric-box"><h2 class="counter" data-target="20">0</h2>TAT Days</div></div>
+
 </div>
-</section>
+</div>
 
 <!-- EXPERIENCE -->
-<section id="experience">
-<div class="card timeline">
-<div><h4>Lead Recruiter – EY Partner</h4><p>8–12 closures/month</p></div>
-<div><h4>Senior US IT Recruiter</h4><p>C2C / W2 / FT</p></div>
-<div><h4>Entrepreneur</h4><p>Café Business</p></div>
+<div class="section-box timeline">
+<div><b>Lead Recruiter – EY Partner</b><br>8–12 closures monthly</div>
+<div><b>Senior US IT Recruiter</b><br>C2C / W2 / FT</div>
+<div><b>Entrepreneur</b></div>
 </div>
-</section>
 
 <!-- SKILLS -->
-<section id="skills">
-<div class="card">
-<h2>Skills</h2>
-
-SAP<div class="bar"><span style="width:90%"></span></div><br>
-Oracle<div class="bar"><span style="width:85%"></span></div><br>
-Cloud<div class="bar"><span style="width:80%"></span></div>
+<div class="section-box">
+SAP<div class="skill-bar"><span data-width="90%"></span></div><br>
+Oracle<div class="skill-bar"><span data-width="85%"></span></div><br>
+Cloud<div class="skill-bar"><span data-width="80%"></span></div>
+</div>
 
 </div>
-</section>
 
-<!-- TESTIMONIAL -->
-<section>
-<div class="card slider">
-<div class="slide">“Delivered niche SAP hiring fast.”</div>
-<div class="slide">“Excellent SLA discipline.”</div>
-</div>
-</section>
-
-<!-- CASES -->
-<section id="cases">
-<div class="card cases">
-<div>SAP Program – 12 hires</div>
-<div>Cloud Migration – 7 hires</div>
-<div>US Staffing – 30 consultants</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<div class="card">
-<h2>Contact</h2>
-<p>saurabhitrecruitment@gmail.com</p>
-<p>+91 6395990728</p>
-</div>
-</section>
-
-<a class="float" href="https://wa.me/916395990728"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/916395990728"
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%">
+<i class="fab fa-whatsapp"></i></a>
 
 <script>
 
-/* Typing */
-const words=["SAP Hiring","Oracle Recruitment","Cloud Talent","US Staffing"];
-let i=0,j=0,cur="";
+/* typing */
+const t=["SAP Hiring","Oracle Talent","Cloud Recruiting","US Staffing"];
+let i=0,j=0;
 setInterval(()=>{
-cur=words[i].slice(0,j++);
-document.getElementById("typing").innerText=cur;
-if(j>words[i].length+5){j=0;i=(i+1)%words.length}
+document.getElementById("typing").innerText=t[i].slice(0,j++);
+if(j>t[i].length+5){j=0;i=(i+1)%t.length}
 },150);
 
-/* Reveal */
-document.querySelectorAll('.card').forEach(c=>{
+/* reveal */
+document.querySelectorAll('.section-box').forEach(s=>{
 new IntersectionObserver(e=>{
-if(e[0].isIntersecting)c.classList.add("show");
-}).observe(c);
+if(e[0].isIntersecting)s.classList.add("show");
+}).observe(s);
 });
 
-/* Counters */
+/* counters */
 document.querySelectorAll('.counter').forEach(c=>{
 new IntersectionObserver(e=>{
 if(e[0].isIntersecting){
 let t=+c.dataset.target,v=0;
-(function run(){v+=t/80;c.innerText=Math.ceil(v);if(v<t)requestAnimationFrame(run)})();
+(function run(){v+=t/60;c.innerText=Math.ceil(v);if(v<t)requestAnimationFrame(run)})();
 }
 }).observe(c);
 });
 
-/* Logo cascade */
-document.querySelectorAll('.logos img').forEach((l,i)=>{
+/* skills */
+document.querySelectorAll('.skill-bar span').forEach(b=>{
+new IntersectionObserver(e=>{
+if(e[0].isIntersecting)b.style.width=b.dataset.width;
+}).observe(b);
+});
+
+/* logos */
+document.querySelectorAll('.logo-row img').forEach((l,i)=>{
 setTimeout(()=>l.classList.add("show"),i*150)
-});
-
-/* Slider */
-let idx=0;
-setInterval(()=>{
-document.querySelector('.slider').style.transform=`translateX(-${++idx%2*100}%)`
-},3000);
-
-/* Dark mode */
-document.querySelector('.toggle').onclick=()=>document.documentElement.classList.toggle("dark");
-
-/* Nav active */
-window.addEventListener("scroll",()=>{
-document.querySelectorAll("section").forEach(s=>{
-if(scrollY>=s.offsetTop-100)
-document.querySelectorAll("nav a").forEach(a=>{
-a.classList.toggle("active",a.getAttribute("href")==="#"+s.id)
-});
-});
 });
 
 </script>
