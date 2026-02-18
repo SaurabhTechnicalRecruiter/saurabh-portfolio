@@ -5,88 +5,162 @@
 <meta charset="utf-8">
 <title>Saurabh Sharma | Senior IT & ERP Recruiter</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Senior IT & ERP Recruiter with 10+ years experience specializing in SAP, Oracle, Cloud, Data and US Staffing recruitment models.">
+<meta name="description" content="Senior IT & ERP Recruiter specializing in SAP, Oracle, Cloud, Data and US Staffing recruitment models.">
 
 <link rel="icon" type="image/png" href="img/favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 
 <style>
+
+html { scroll-behavior: smooth; }
+
+body {
+font-family: 'Roboto', sans-serif;
+background:#f8f9fa;
+}
+
+/* Glass Navbar */
+.navbar{
+backdrop-filter: blur(12px);
+background: rgba(255,255,255,.85)!important;
+transition:.3s ease;
+}
+
+/* Section Card */
 .section-box{
 background:white;
-padding:40px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-margin-bottom:50px;
+padding:50px;
+border-radius:18px;
+box-shadow:0 15px 40px rgba(0,0,0,.07);
+margin-bottom:60px;
+transition:.4s ease;
+opacity:0;
+transform:translateY(40px);
 }
+
+.section-box.visible{
+opacity:1;
+transform:none;
+}
+
+.section-box:hover{
+transform:translateY(-6px);
+}
+
+/* Metrics */
 .metric-box{
 background:#fff;
-border-radius:12px;
-padding:25px;
-box-shadow:0 6px 20px rgba(0,0,0,.08);
+border-radius:16px;
+padding:30px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s ease;
 }
+
+.metric-box:hover{
+transform:scale(1.05);
+}
+
+/* Logos */
 .logo-row img{
-height:50px;
-margin:15px;
+height:55px;
+margin:18px;
 filter:grayscale(100%);
-opacity:.8;
+opacity:0;
+transform:translateY(20px);
+transition:.6s ease;
 }
+
+.logo-row img.show{
+opacity:1;
+transform:none;
+}
+
 .logo-row img:hover{
 filter:none;
-opacity:1;
 }
+
+/* Buttons */
+.btn{
+transition:.3s ease;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* Hero */
+.hero-title{
+animation:slideDown 1s ease forwards;
+opacity:0;
+}
+
+.hero-sub{
+animation:fadeIn 1.6s ease forwards;
+opacity:0;
+}
+
+@keyframes slideDown{
+from{opacity:0;transform:translateY(-40px);}
+to{opacity:1;transform:none;}
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
 </style>
 </head>
 
 <body>
 
-<nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-<a href="#home" class="navbar-brand ml-lg-3">
+<nav class="navbar fixed-top shadow-sm navbar-expand-lg navbar-light py-3 px-lg-5">
+<a href="#home" class="navbar-brand">
 <h1 class="m-0 display-5"><span class="text-primary">Saurabh</span> Sharma</h1>
 </a>
 </nav>
 
 <!-- HERO -->
-<div class="container-fluid d-flex align-items-center mb-5 py-5" id="home"
+<div class="container-fluid d-flex align-items-center py-5"
+id="home"
 style="min-height:100vh;background-image:url('img/bg.jpg');background-size:cover;">
 <div class="container text-center">
+
 <img src="img/profile.jpg"
-style="width:160px;height:160px;border-radius:50%;border:4px solid white;margin-bottom:20px;">
-<h1 class="display-3 text-uppercase text-white">Senior IT & ERP Recruiter</h1>
-<p class="text-white">
+style="width:170px;height:170px;border-radius:50%;border:4px solid white;margin-bottom:25px;object-fit:cover;box-shadow:0 12px 35px rgba(0,0,0,.4);">
+
+<h1 class="display-3 text-uppercase text-white hero-title">
+Senior IT & ERP Recruiter
+</h1>
+
+<p class="text-white hero-sub">
 Talent Acquisition Lead | SAP • Oracle • Cloud • Data • US Staffing
 </p>
 
 <div class="mt-4">
-<a href="./resume.pdf" class="btn btn-primary mr-2" download>Download Resume</a>
-<a href="https://linkedin.com/in/saurabhsharmarec" class="btn btn-outline-light" target="_blank">LinkedIn</a>
+<a href="./resume.pdf" class="btn btn-primary mr-3" download>Download Resume</a>
+<a href="https://linkedin.com/in/saurabhsharmarec"
+class="btn btn-outline-light" target="_blank">LinkedIn</a>
 </div>
+
 </div>
 </div>
 
-<div class="container">
+<div class="container mt-5">
 
 <!-- EXECUTIVE SUMMARY -->
 <div class="section-box text-center">
-<h2 class="text-primary mb-3">Executive Summary</h2>
-
+<h2 class="text-primary mb-4">Executive Summary</h2>
 <p>
-Senior IT & ERP Recruiter with 10+ years overall professional experience, including 7+ years in
+Senior IT & ERP Recruiter with 10+ years overall professional experience including 7+ years in
 specialized IT & ERP recruitment across India and US staffing models.
 </p>
-
 <p>
-Proven track record in owning recruitment strategy, delivering niche hiring across SAP, Oracle,
-Cloud, Data, and Engineering roles while consistently meeting aggressive SLAs.
-</p>
-
-<p>
-Strong stakeholder partner with measurable hiring outcomes and predictable delivery frameworks.
+Proven track record in owning recruitment strategy and delivering niche hiring across SAP,
+Oracle, Cloud, Data and Engineering roles with predictable SLA-driven execution.
 </p>
 </div>
 
@@ -104,39 +178,39 @@ Strong stakeholder partner with measurable hiring outcomes and predictable deliv
 <img src="img/logos/tekinspiration.png">
 </div>
 
-<p class="mt-3">
-Taj Consultancy (EY Partner) • Quantum World Technologies • Q1 Technologies • NLB Services • Diverse Lynx • Tek Inspiration
+<p class="mt-4">
+Taj Consultancy (EY Partner) • Quantum World • Q1 Technologies • NLB Services • Diverse Lynx • Tek Inspiration
 </p>
 </div>
 
 <!-- METRICS -->
 <div class="section-box">
-<h2 class="text-primary text-center mb-4">Hiring Impact</h2>
+<h2 class="text-primary text-center mb-5">Hiring Impact</h2>
 
 <div class="row text-center">
 
-<div class="col-md-3 col-6 mb-4">
+<div class="col-md-3 mb-4">
 <div class="metric-box">
 <h1 class="text-primary counter" data-target="12">0</h1>
-<p>Closures / Quarter</p>
+<p>Closures / Month</p>
 </div>
 </div>
 
-<div class="col-md-3 col-6 mb-4">
+<div class="col-md-3 mb-4">
 <div class="metric-box">
 <h1 class="text-primary counter" data-target="95">0</h1>
 <p>% SLA Adherence</p>
 </div>
 </div>
 
-<div class="col-md-3 col-6 mb-4">
+<div class="col-md-3 mb-4">
 <div class="metric-box">
 <h1 class="text-primary counter" data-target="25">0</h1>
 <p>Active Requisitions</p>
 </div>
 </div>
 
-<div class="col-md-3 col-6 mb-4">
+<div class="col-md-3 mb-4">
 <div class="metric-box">
 <h1 class="text-primary counter" data-target="20">0</h1>
 <p>Avg Time-to-Hire (Days)</p>
@@ -146,75 +220,33 @@ Taj Consultancy (EY Partner) • Quantum World Technologies • Q1 Technologies 
 </div>
 </div>
 
-<!-- CORE EXPERTISE -->
-<div class="section-box text-center">
-<h2 class="text-primary mb-4">Core Expertise</h2>
-
-<div class="row">
-<div class="col-md-4 mb-2">Senior IT & ERP Recruitment</div>
-<div class="col-md-4 mb-2">US IT Staffing</div>
-<div class="col-md-4 mb-2">SAP & Oracle Hiring</div>
-<div class="col-md-4 mb-2">Cloud & Data Hiring</div>
-<div class="col-md-4 mb-2">Recruitment Strategy Ownership</div>
-<div class="col-md-4 mb-2">Hiring Metrics & SLA Governance</div>
-<div class="col-md-4 mb-2">LinkedIn Boolean & Talent Mapping</div>
-<div class="col-md-4 mb-2">Offer Negotiation & Joining Management</div>
-<div class="col-md-4 mb-2">Pipeline Building & Market Intelligence</div>
-<div class="col-md-4 mb-2">Time-to-Hire Optimization</div>
-<div class="col-md-4 mb-2">Stakeholder Leadership</div>
-<div class="col-md-4 mb-2">Contract / Permanent / RPO Models</div>
-</div>
-</div>
-
-<!-- PROFESSIONAL EXPERIENCE -->
+<!-- EXPERIENCE -->
 <div class="section-box">
 <h2 class="text-primary text-center mb-4">Professional Experience</h2>
 
-<h5>Lead Technical Recruiter & Hiring Partner – Taj Consultancy Service (EY Partner)</h5>
+<h5>Lead Technical Recruiter & Hiring Partner – Taj Consultancy (EY Partner)</h5>
 <p>
-Own recruitment strategy and end-to-end delivery for SAP, Oracle, Cloud, Data, and emerging tech roles.
-Manage 15–25 active requisitions while maintaining 90–95% SLA adherence.
-Achieve average 8–12 monthly closures across contract and permanent hiring.
-Reduced time-to-hire to 18–25 days through proactive pipeline building and market mapping.
-Act as hiring advisor providing market feasibility insights.
+Own recruitment strategy and end-to-end delivery for SAP, Oracle, Cloud and Data roles.
+Manage 15–25 active requisitions with 90–95% SLA compliance.
+Achieve 8–12 monthly closures while reducing time-to-hire to 18–25 days.
 </p>
 
 <hr>
 
-<h5>Senior IT Recruiter – US Staffing & Niche IT (2019 – 2025)</h5>
+<h5>Senior IT Recruiter – US Staffing & Niche IT (2019–2025)</h5>
 <p>
-Led full-cycle recruitment for SAP, Oracle ERP, Cloud, Data, DevOps, QA Automation and Engineering roles.
-Closed 6–10 positions per month across C2C/W2, Full-Time and C2H models.
-Maintained 90%+ SLA compliance across multiple client accounts.
-Built long-term consultant pipelines reducing job portal dependency.
+Full-cycle recruitment across SAP, Oracle ERP, Cloud, DevOps and Engineering roles.
+6–10 monthly closures across C2C/W2/FT/C2H models with 90%+ SLA.
 </p>
 
-<p>
-Organizations: Quantum World Technologies • Q1 Technologies • NLB Services • Diverse Lynx • Tek Inspiration
-</p>
-
-<hr>
-
-<h5>Self-Employed – Café Business</h5>
-<p>
-Managed operations, vendor management and customer engagement.
-Developed operational discipline and ownership mindset before returning to corporate recruitment.
-</p>
-
-<hr>
-
-<h5>Early Career – Customer Service & Operations</h5>
-<p>
-Developed foundation in stakeholder handling, reporting, escalation management and service excellence.
-</p>
 </div>
 
 <!-- CERTIFICATIONS -->
 <div class="section-box text-center">
 <h2 class="text-primary mb-3">Certifications</h2>
 <p>
-AI-Driven Recruiting (LinkedIn) • ChatGPT for HR • Recruiter Power User Assessment •
-Naukri Maestro Recruiter Program • LinkedIn Marketing • Jira Project Management
+AI-Driven Recruiting • ChatGPT for HR • Recruiter Power User •
+Naukri Maestro • LinkedIn Marketing • Jira Project Management
 </p>
 </div>
 
@@ -225,7 +257,6 @@ Naukri Maestro Recruiter Program • LinkedIn Marketing • Jira Project Managem
 <h2 class="text-primary">Let’s Connect</h2>
 <p>saurabhitrecruitment@gmail.com</p>
 <p>+91 6395990728</p>
-
 <a href="https://wa.me/916395990728" class="btn btn-outline-primary" target="_blank">WhatsApp</a>
 </div>
 
@@ -235,21 +266,32 @@ Naukri Maestro Recruiter Program • LinkedIn Marketing • Jira Project Managem
 
 <!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/916395990728"
-style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;box-shadow:0 4px 10px rgba(0,0,0,0.3);z-index:999;">
+style="position:fixed;bottom:25px;right:25px;background:#25D366;color:white;padding:16px;border-radius:50%;box-shadow:0 6px 20px rgba(0,0,0,0.3);z-index:999;">
 <i class="fab fa-whatsapp"></i>
 </a>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
-
 <script>
-document.addEventListener("DOMContentLoaded",function(){
-document.querySelectorAll(".counter").forEach(counter=>{
+/* Fade Sections */
+const sections=document.querySelectorAll('.section-box');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+}
+});
+});
+sections.forEach(sec=>observer.observe(sec));
+
+/* Counter Animation */
+const counters=document.querySelectorAll('.counter');
+const counterObserver=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+const counter=entry.target;
 let target=+counter.dataset.target,count=0;
 function update(){
-let inc=target/100;
-count+=inc;
+count+=target/80;
 if(count<target){
 counter.innerText=Math.ceil(count);
 requestAnimationFrame(update);
@@ -258,7 +300,15 @@ counter.innerText=target;
 }
 }
 update();
+counterObserver.unobserve(counter);
+}
 });
+});
+counters.forEach(c=>counterObserver.observe(c));
+
+/* Logo Cascade */
+document.querySelectorAll('.logo-row img').forEach((img,i)=>{
+setTimeout(()=>img.classList.add('show'),i*150);
 });
 </script>
 
