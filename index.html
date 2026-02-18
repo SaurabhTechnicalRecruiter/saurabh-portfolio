@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="utf-8">
-<title>Saurabh Sharma | Senior IT & ERP Recruiter</title>
+<title>Saurabh Sharma | Lead Talent Acquisition & ERP Recruiter</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="icon" href="img/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
 <style>
 
-html{scroll-behavior:smooth}
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#f8f9fc 0%,#eef1f7 100%);
+background:#f4f6fa;
 color:#1f2937;
+line-height:1.7;
 }
 
-/* EY BRAND COLORS */
 :root{
 --ey-yellow:#FFE600;
 --ey-dark:#1f2937;
---soft-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
 /* NAV */
@@ -32,20 +28,18 @@ color:#1f2937;
 position:fixed;
 top:0;
 width:100%;
-padding:18px 60px;
-background:rgba(255,255,255,0.9);
-backdrop-filter:blur(12px);
-box-shadow:0 8px 25px rgba(0,0,0,.06);
-z-index:999;
+padding:20px 60px;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 display:flex;
 justify-content:space-between;
 align-items:center;
+z-index:999;
 }
 
 .navbar strong{
 font-size:22px;
 font-weight:700;
-letter-spacing:.5px;
 }
 
 .navbar a{
@@ -53,18 +47,12 @@ margin-left:25px;
 text-decoration:none;
 color:#444;
 font-weight:500;
-font-size:15px;
-transition:.3s;
-}
-
-.navbar a:hover{
-color:#000;
 }
 
 /* HERO */
 .hero{
 min-height:100vh;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('img/bg.jpg') center/cover;
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('img/bg.jpg') center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -74,9 +62,8 @@ color:white;
 }
 
 .hero h1{
-font-size:48px;
+font-size:50px;
 margin-bottom:15px;
-font-weight:700;
 }
 
 .hero p{
@@ -89,150 +76,78 @@ width:180px;height:180px;
 border-radius:50%;
 border:5px solid var(--ey-yellow);
 object-fit:cover;
-box-shadow:0 20px 45px rgba(0,0,0,.5);
 margin-bottom:20px;
 }
 
-/* CONTAINER */
-.container{
+/* SECTIONS */
+.section{
 width:85%;
-margin:auto;
+margin:100px auto;
 }
 
-/* SECTION CARDS */
-.section-box{
-background:white;
-padding:60px;
-border-radius:18px;
-box-shadow:var(--soft-shadow);
-margin:80px 0;
-opacity:0;
-transform:translateY(40px);
-transition:.8s ease;
-}
-
-.section-box.show{
-opacity:1;
-transform:none;
-}
-
-.section-box h2{
-font-size:28px;
+.section h2{
+font-size:30px;
 margin-bottom:25px;
-position:relative;
-display:inline-block;
-}
-
-.section-box h2::after{
-content:"";
-display:block;
-height:4px;
-width:60%;
-background:var(--ey-yellow);
-margin-top:8px;
-border-radius:5px;
+border-left:6px solid var(--ey-yellow);
+padding-left:12px;
 }
 
 /* METRICS */
 .metrics{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:30px;
-text-align:center;
 }
 
 .metric{
+background:white;
 padding:40px;
-border-radius:16px;
-background:#fafafa;
-box-shadow:0 10px 25px rgba(0,0,0,.05);
-transition:.3s;
-}
-
-.metric:hover{
-transform:translateY(-8px);
+border-radius:18px;
+box-shadow:0 15px 35px rgba(0,0,0,.07);
+text-align:center;
 }
 
 .metric h1{
-font-size:42px;
+font-size:44px;
 margin-bottom:10px;
-color:var(--ey-dark);
 }
 
-/* LOGOS */
-.logos img{
-height:50px;
-margin:20px;
-filter:grayscale(100%);
-opacity:0;
-transition:.6s;
+/* SKILL MATRIX */
+.skill-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.logos img.show{
-opacity:1;
+.skill-card{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 12px 28px rgba(0,0,0,.06);
 }
 
-/* SKILLS */
-.skill{
-margin-bottom:20px;
-font-size:16px;
-font-weight:500;
+.skill-card h4{
+margin-bottom:10px;
 }
 
-.bar{
-background:#ddd;
-height:10px;
-border-radius:10px;
-overflow:hidden;
-margin-top:8px;
-}
-
-.bar span{
-display:block;
-height:100%;
-background:var(--ey-yellow);
-width:0;
-transition:1.2s ease;
-}
-
-/* TIMELINE */
-.timeline{
-border-left:4px solid var(--ey-yellow);
-padding-left:30px;
-font-size:16px;
-line-height:1.7;
-}
-
-.timeline div{
-margin-bottom:30px;
-}
-
-/* BUTTON */
-.btn{
-background:var(--ey-yellow);
-padding:14px 30px;
-border-radius:30px;
-text-decoration:none;
-color:#000;
+.level{
 font-weight:600;
-font-size:16px;
-transition:.3s;
+color:#555;
 }
 
-.btn:hover{
-transform:translateY(-3px);
+/* LIFECYCLE */
+.lifecycle{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
 }
 
-/* FLOAT */
-.float{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:18px;
-border-radius:50%;
-box-shadow:0 8px 20px rgba(0,0,0,.3);
+.step{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,.06);
+text-align:center;
 }
 
 /* FOOTER */
@@ -242,7 +157,16 @@ color:white;
 text-align:center;
 padding:30px;
 margin-top:80px;
-font-size:14px;
+}
+
+/* BUTTON */
+.btn{
+background:var(--ey-yellow);
+padding:14px 30px;
+border-radius:30px;
+text-decoration:none;
+color:black;
+font-weight:600;
 }
 
 </style>
@@ -254,8 +178,8 @@ font-size:14px;
 <strong>Saurabh Sharma</strong>
 <div>
 <a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#skills">Skills</a>
+<a href="#impact">Impact</a>
+<a href="#skills">Capabilities</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
@@ -264,93 +188,142 @@ font-size:14px;
 <div class="hero">
 <div>
 <img src="img/profile.jpg">
-<h1>Senior IT & ERP Recruiter</h1>
-<p>SAP • Oracle • Cloud • Data • US Staffing</p><br>
+<h1>Lead Talent Acquisition & ERP Recruiter</h1>
+<p>SAP • Salesforce • Cloud • Data • GenAI • US Staffing</p><br>
 <a href="./resume.pdf" class="btn" download>Download Resume</a>
 </div>
 </div>
 
-<div class="container">
-
 <!-- ABOUT -->
-<div class="section-box" id="about">
+<div class="section" id="about">
 <h2>Executive Summary</h2>
-<p style="font-size:17px;line-height:1.8">
-Senior IT & ERP Recruiter with 10+ years overall experience including 7+ years in specialized IT & ERP recruitment across India and US staffing models.
-Proven delivery across SAP, Oracle, Cloud, Data and Engineering roles while maintaining aggressive SLAs and predictable hiring frameworks.
+
+<p>
+Lead Technical Recruiter & Account Delivery Partner with 10+ years of professional experience and 7+ years in specialized IT, ERP and Digital hiring across India and US staffing ecosystems.
 </p>
+
+<p>
+Currently driving enterprise hiring for Big-4 consulting delivery, owning full recruitment lifecycle across SAP, Salesforce, Cloud Engineering, Data Platforms, GenAI and BFSI domains.
+</p>
+
+<p>
+Operate recruitment as a delivery function — managing demand intake, sourcing strategy, talent mapping, SLA governance, recruiter pod leadership, offer management and joining protection.
+</p>
+
 </div>
 
-<!-- METRICS -->
-<div class="section-box">
-<h2>Hiring Impact</h2>
+<!-- IMPACT -->
+<div class="section" id="impact">
+<h2>Hiring Impact & Delivery Metrics</h2>
+
 <div class="metrics">
-<div class="metric"><h1 class="counter" data-target="12">0</h1>Offers / Quarter</div>
-<div class="metric"><h1 class="counter" data-target="95">0</h1>SLA %</div>
-<div class="metric"><h1 class="counter" data-target="25">0</h1>Active Requisitions</div>
-<div class="metric"><h1 class="counter" data-target="20">0</h1>Avg TAT (Days)</div>
+<div class="metric">
+<h1>12+</h1>
+Offers Per Quarter
+</div>
+
+<div class="metric">
+<h1>90-95%</h1>
+SLA Adherence
+</div>
+
+<div class="metric">
+<h1>15-25</h1>
+Parallel Requisitions
+</div>
+
+<div class="metric">
+<h1>18-25</h1>
+Avg Time-to-Hire (Days)
+</div>
+</div>
+</div>
+
+<!-- RECRUITMENT LIFECYCLE -->
+<div class="section">
+<h2>End-to-End Recruitment Lifecycle Ownership</h2>
+
+<div class="lifecycle">
+<div class="step">Demand Intake & Role Calibration</div>
+<div class="step">Market Feasibility & Talent Mapping</div>
+<div class="step">X-Ray & Web 2.0 Sourcing Strategy</div>
+<div class="step">Screening & Technical Evaluation</div>
+<div class="step">Stakeholder Coordination</div>
+<div class="step">Offer Negotiation & Counter Handling</div>
+<div class="step">Joining Management & Dropout Prevention</div>
+<div class="step">Post-Join Tracking & Reporting</div>
 </div>
 </div>
 
-<!-- EXPERIENCE -->
-<div class="section-box timeline" id="experience">
-<h2>Professional Experience</h2>
-<div><b>Lead Technical Recruiter – Taj Consultancy (EY Partner)</b><br>
-SAP, Oracle, Cloud & Data hiring. 15–25 requisitions concurrently. 12 offers per quarter. 90–95% SLA. 18–25 days TAT.</div>
+<!-- SKILL MATRIX -->
+<div class="section" id="skills">
+<h2>Capability Matrix</h2>
 
-<div><b>Senior IT Recruiter – US Staffing</b><br>
-C2C / W2 / FT / C2H hiring across SAP, Oracle ERP, Cloud, DevOps & Engineering.</div>
+<div class="skill-grid">
 
-<div><b>Self-Employed – Café Business</b><br>
-Operations, vendor management & customer engagement.</div>
+<div class="skill-card">
+<h4>Enterprise Recruitment Leadership</h4>
+<div class="level">Expert Level</div>
+End-to-end lifecycle ownership across multiple business units.
 </div>
 
-<!-- SKILLS -->
-<div class="section-box" id="skills">
-<h2>Recruitment Skills & Hiring Stack</h2>
+<div class="skill-card">
+<h4>X-Ray Search & Boolean Mastery</h4>
+<div class="level">Advanced</div>
+Google/Bing X-Ray, LinkedIn, GitHub, Web 2.0 platforms.
+</div>
 
-<div class="skill">End-to-End IT Recruitment<div class="bar"><span data-width="95%"></span></div></div>
-<div class="skill">US Staffing Models<div class="bar"><span data-width="90%"></span></div></div>
-<div class="skill">SAP / Oracle Hiring<div class="bar"><span data-width="90%"></span></div></div>
-<div class="skill">Cloud & Data Hiring<div class="bar"><span data-width="85%"></span></div></div>
-<div class="skill">LinkedIn Boolean Search<div class="bar"><span data-width="95%"></span></div></div>
-<div class="skill">Stakeholder Management<div class="bar"><span data-width="90%"></span></div></div>
+<div class="skill-card">
+<h4>US Staffing Models</h4>
+<div class="level">Advanced</div>
+C2C, W2, Full-Time, C2H, RPO, MSP.
+</div>
+
+<div class="skill-card">
+<h4>SAP / ERP / Salesforce Hiring</h4>
+<div class="level">Advanced</div>
+Functional & Technical consultants, Solution Architects.
+</div>
+
+<div class="skill-card">
+<h4>Cloud / Data / GenAI Hiring</h4>
+<div class="level">Advanced</div>
+AWS, Azure, Data Engineering, AI/ML roles.
+</div>
+
+<div class="skill-card">
+<h4>Stakeholder & Delivery Governance</h4>
+<div class="level">Expert</div>
+Hiring manager partnership, SLA reporting & escalations.
+</div>
+
+</div>
+</div>
+
+<!-- MODERN SOURCING -->
+<div class="section">
+<h2>Modern Sourcing Strategy</h2>
+
+<ul>
+<li>Advanced LinkedIn Boolean & Google X-Ray Search</li>
+<li>GitHub, StackOverflow, Kaggle, Medium, Meetup Sourcing</li>
+<li>Passive Candidate Engagement & Community Mapping</li>
+<li>CRM Re-engagement & Talent Pool Creation</li>
+<li>Diversity Hiring & Market Intelligence Reporting</li>
+</ul>
 
 </div>
 
 <!-- CONTACT -->
-<div class="section-box" id="contact">
+<div class="section" id="contact">
 <h2>Contact</h2>
-<p style="font-size:17px">saurabhitrecruitment@gmail.com</p>
-<p style="font-size:17px">+91 6395990728</p>
-</div>
-
+<p>saurabhitrecruitment@gmail.com</p>
+<p>+91 6395990728</p>
 </div>
 
 <footer>
-© 2026 Saurabh Sharma | Senior IT & ERP Recruiter
+© 2026 Saurabh Sharma | Lead Talent Acquisition & ERP Recruiter
 </footer>
-
-<a href="https://wa.me/916395990728" class="float"><i class="fab fa-whatsapp"></i></a>
-
-<script>
-document.querySelectorAll('.section-box').forEach(s=>{
-new IntersectionObserver(e=>{if(e[0].isIntersecting)s.classList.add("show");}).observe(s);
-});
-
-document.querySelectorAll('.counter').forEach(c=>{
-new IntersectionObserver(e=>{
-if(e[0].isIntersecting){
-let t=+c.dataset.target,v=0;
-(function run(){v+=t/60;c.innerText=Math.ceil(v);if(v<t)requestAnimationFrame(run)})();
-}
-}).observe(c);
-});
-
-document.querySelectorAll('.bar span').forEach(b=>{
-new IntersectionObserver(e=>{if(e[0].isIntersecting)b.style.width=b.dataset.width;}).observe(b);
-});
-</script>
 
 </body>
 </html>
